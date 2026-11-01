@@ -18,7 +18,6 @@
   "@type": "Person",
   "name": "Tinakaran Chinnachamy",
   "url": "https://tkc410.github.io/",
-  "email": "mailto:tinakaran@gmail.com",
   "address": {"@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US"},
   "sameAs": [
     "https://www.linkedin.com/in/tinakaran",
@@ -308,12 +307,7 @@
 <section>
   <div class="wrap contact">
     <h2>Get in touch</h2>
-    <p>Open to senior applied-AI roles where the system design and the team that ships it are the same problem. Austin, hybrid in Texas, or remote. US permanent resident; no sponsorship needed.</p>
-    <div class="contact-row">
-      <span class="lbl">Email</span>
-      <code id="email">tinakaran@gmail.com</code>
-      <button class="btn" type="button" id="copy-email">Copy</button>
-    </div>
+    <p>Open to senior applied-AI roles where the system design and the team that ships it are the same problem. Austin, hybrid in Texas, or remote. US permanent resident; no sponsorship needed. The fastest way to reach me is a LinkedIn message.</p>
     <div class="contact-row">
       <span class="lbl">LinkedIn</span>
       <a href="https://www.linkedin.com/in/tinakaran" target="_blank" rel="noopener">linkedin.com/in/tinakaran</a>
@@ -329,26 +323,5 @@
   <div class="wrap">Tinakaran Chinnachamy · Austin, Texas</div>
 </footer>
 
-<script>
-  (function () {
-    var btn = document.getElementById('copy-email');
-    var code = document.getElementById('email');
-    btn.addEventListener('click', function () {
-      var text = code.textContent;
-      function fallback() {
-        var r = document.createRange(); r.selectNodeContents(code);
-        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-        btn.textContent = 'Selected';
-        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function () {
-          btn.textContent = 'Copied';
-          setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
-        }).catch(fallback);
-      } else { fallback(); }
-    });
-  })();
-</script>
 </body>
 </html>
