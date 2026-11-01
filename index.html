@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tinakaran Chinnachamy | Generative, Multimodal and Agentic AI at Scale</title>
+<meta name="description" content="Tinakaran Chinnachamy, Austin, Texas. 23 years in enterprise technology; built eBay's LLM-based compliance enforcement platform across ~200M listings, GenAI knowledge platforms and agentic AI systems. Author of five 2025 papers on AI fairness, prompt security, LLM memory and multimodal generation. IEEE Senior Member.">
+<link rel="canonical" href="https://tinakaran.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Tinakaran Chinnachamy">
+<meta property="og:description" content="Generative, multimodal and agentic AI for regulated, high-scale environments. From proof of concept to production platform to the people who run it.">
+<meta property="og:url" content="https://tinakaran.github.io/">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tinakaran Chinnachamy",
+  "url": "https://tinakaran.github.io/",
+  "email": "mailto:tinakaran@gmail.com",
+  "address": {"@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US"},
+  "sameAs": [
+    "https://www.linkedin.com/in/tinakaran",
+    "https://www.researchgate.net/profile/Tinakaran-Chinnachamy",
+    "https://orcid.org/0009-0003-1168-7987"
+  ],
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "McCombs School of Business, The University of Texas at Austin"},
+    {"@type": "CollegeOrUniversity", "name": "National Engineering College"}
+  ],
+  "memberOf": {"@type": "Organization", "name": "IEEE"},
+  "knowsAbout": ["Generative AI", "Agentic AI", "Retrieval-Augmented Generation", "Multimodal AI", "LLMOps", "Responsible AI", "AML and compliance systems", "Kubernetes"]
+}
+</script>
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: a single narrow reading column; one dark "ledger" band for the record of work, like a compliance audit trail. */
+  :root {
+    --bg: #f6f7f4;
+    --surface: #ffffff;
+    --fg: #182027;
+    --muted: #5b6670;
+    --line: #d9ded8;
+    --accent: #0f6e6a;
+    --accent-ink: #ffffff;
+    --band: #141b22;
+    --band-fg: #e8ecef;
+    --band-muted: #9aa6b1;
+    --band-line: #2a343d;
+    --display: "Sora", "Segoe UI", system-ui, sans-serif;
+    --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1419; --surface: #171d24; --fg: #e6eaee; --muted: #9aa6b1; --line: #2a343d;
+      --accent: #4fbfb8; --accent-ink: #0f1419;
+      --band: #0a0e12; --band-fg: #e6eaee; --band-muted: #8f9ba6; --band-line: #222c35;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1419; --surface: #171d24; --fg: #e6eaee; --muted: #9aa6b1; --line: #2a343d;
+    --accent: #4fbfb8; --accent-ink: #0f1419;
+    --band: #0a0e12; --band-fg: #e6eaee; --band-muted: #8f9ba6; --band-line: #222c35;
+    color-scheme: dark;
+  }
+
+  body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 48px; }
+  .band { background: var(--band); color: var(--band-fg); }
+  .band .wrap { padding-block: 56px; }
+  h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.15; margin: 0; }
+  h1 { font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; letter-spacing: -0.02em; }
+  h2 { font-size: 1.35rem; font-weight: 600; margin-bottom: 20px; }
+  h3 { font-size: 1.05rem; font-weight: 600; }
+  p { margin: 0; max-width: 62ch; }
+  .eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  header .wrap { display: grid; gap: 20px; padding-block: 64px 40px; }
+  .headline { font-family: var(--display); font-weight: 500; font-size: 1.15rem; color: var(--muted); max-width: 44ch; }
+  .hook { font-size: 1.25rem; border-left: 3px solid var(--accent); padding-left: 18px; max-width: 52ch; }
+
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .facts div { padding: 18px 18px 18px 0; border-right: 1px solid var(--line); }
+  .facts div:last-child { border-right: 0; }
+  .facts b { display: block; font-family: var(--display); font-size: 1.7rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .facts span { font-size: 0.85rem; color: var(--muted); }
+
+  section + section .wrap { border-top: 1px solid var(--line); }
+  .band section + section .wrap { border-top-color: var(--band-line); }
+
+  .roles { display: grid; gap: 36px; }
+  .role { display: grid; grid-template-columns: 130px 1fr; gap: 16px; }
+  .role .when { font-family: var(--mono); font-size: 0.82rem; color: var(--band-muted); padding-top: 4px; font-variant-numeric: tabular-nums; }
+  .role .what { min-width: 0; display: grid; gap: 10px; }
+  .role .org { color: var(--band-muted); font-size: 0.95rem; }
+  .role ul { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 8px; color: var(--band-fg); }
+  .band p, .band li { max-width: 62ch; }
+  .env { font-family: var(--mono); font-size: 0.78rem; color: var(--band-muted); line-height: 1.5; }
+  @media (max-width: 520px) { .role { grid-template-columns: 1fr; gap: 6px; } }
+
+  .papers { display: grid; gap: 18px; }
+  .paper { background: var(--surface); border: 1px solid var(--line); padding: 18px 20px; display: grid; gap: 8px; }
+  .paper p { font-size: 0.95rem; color: var(--muted); }
+  .paper .cite { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+  .four { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 18px; }
+  .four div { border-top: 2px solid var(--accent); padding-top: 10px; font-size: 0.95rem; }
+  .four b { display: block; font-family: var(--display); font-weight: 600; }
+
+  .stack { display: grid; gap: 16px; margin: 0; }
+  .stack dt { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .stack dd { margin: 2px 0 0; }
+
+  .contact { display: grid; gap: 14px; }
+  .contact-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+  .contact-row .lbl { color: var(--muted); min-width: 90px; }
+  .contact-row code { font-family: var(--mono); font-size: 0.95rem; background: var(--surface); border: 1px solid var(--line); padding: 6px 10px; }
+  .btn { font-family: var(--body); font-size: 0.85rem; font-weight: 600; background: var(--accent); color: var(--accent-ink); border: 0; padding: 7px 12px; cursor: pointer; }
+  footer .wrap { padding-block: 24px 40px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); }
+  @media (prefers-reduced-motion: no-preference) { .btn { transition: opacity .15s; } .btn:hover { opacity: .85; } }
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Austin, Texas · Available now</span>
+    <h1>Tinakaran Chinnachamy</h1>
+    <p class="headline">Generative, multimodal and agentic AI for regulated, high-scale environments. From proof of concept to production platform to the people who run it.</p>
+    <p class="hook">Every item listed on a global marketplace raises a question: should this be here at all? At eBay I built what answers it across ~200 million listings, most recently with LLMs and vision-language models doing the first read and a global team doing the rest.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="facts">
+      <div><b>23</b><span>years in enterprise technology</span></div>
+      <div><b>~200M</b><span>listings screened by the compliance AI platform</span></div>
+      <div><b>84%</b><span>accuracy on LLM-based policy-violation detection</span></div>
+      <div><b>5</b><span>peer-reviewed papers on applied GenAI, 2025</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What I do</h2>
+    <p>I take hard decisioning problems in regulated, high-volume environments and turn them into AI systems that hold up in production: retrieval and semantic search, model selection and routing, guardrails, human-in-the-loop design, evaluation harnesses, LLMOps and observability, on a cloud, Kubernetes and SRE foundation I spent a decade building. The pattern repeats. Frame the problem, prove it with my own hands at small scale, set the design standards, then build out the 30-plus-person global organization across three geographies that carries it the rest of the way. The compliance AI program at eBay went from three engineers and a proof of concept to every listing on the site that way.</p>
+    <p style="margin-top:14px">The hard part is rarely the model. It is the trade-offs around it: accuracy against inference cost, speed against auditability, automation against a person's right to be reviewed, and which of those a team should own versus buy.</p>
+  </div>
+</section>
+
+<div class="band">
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Record of work</span>
+    <h2 style="margin-top:8px">Experience</h2>
+    <div class="roles">
+      <div class="role">
+        <div class="when">2021 – 2026</div>
+        <div class="what">
+          <h3>Marketplace Compliance Enforcement Platform</h3>
+          <div class="org">eBay, Austin · owned the AI design, the delivery program and the engineering managers under it</div>
+          <p>AI and rules-based systems that decide whether a listing is prohibited, counterfeit, unsafe or otherwise noncompliant, with most decisions resolved without a human reading them.</p>
+          <ul>
+            <li>Owned the GenAI and multimodal design end to end: problem framing, model selection and routing, retrieval and guardrail layers, human-in-the-loop design, production integration and LLM observability. Ran it through three engineering managers across geographies and a 30-plus team spanning data analytics, data science, architecture and pipeline engineering.</li>
+            <li>Started the compliance AI program as a proof of concept with three engineers, personally building the LLM-based detection system at low volume (Jan–Mar 2025), then scaled it across all of eBay.</li>
+            <li>Designed a pluggable three-stage detection funnel where cheap filters run first and only surviving candidates reach LLM and multimodal evaluation. Displaced a vendor classification service, cutting enforcement latency from 24 hours to a 5-minute SLA.</li>
+            <li>Built real-time multimodal screening for live video selling: frame sampling, metadata enrichment and a tool-calling path through vision-language evaluation, with retries, fallbacks and human escalation on low-confidence results.</li>
+            <li>Set the design-review standards for new AI solutions and chaired reviews across concurrent AI programs, balancing precision, coverage, token cost, explainability and legal requirements; designed EPR Germany (LUCID) regulatory controls affecting ~5M listings. Compliance engineering work credited with roughly $20M in savings.</li>
+          </ul>
+          <div class="env">LLMs · vision-language models · Phi-3 · InternVL-1.5 · Mistral · Gemma · LangChain · embeddings and semantic retrieval · tool calling · Python · Java · Kafka · Kubernetes</div>
+        </div>
+      </div>
+      <div class="role">
+        <div class="when">2022 – 2026</div>
+        <div class="what">
+          <h3>Enterprise GenAI Knowledge Platform and Open-Source Model Enablement</h3>
+          <div class="org">eBay, Austin · set the platform direction and the evaluation bar other teams built against</div>
+          <ul>
+            <li>Designed a RAG-based knowledge platform covering 73 policy areas for service, operations and compliance teams, with semantic chunking, grounding and citation.</li>
+            <li>Established evaluation, benchmarking and preproduction pathways for Phi-3, InternVL-1.5, Mistral and Gemma, reducing dependence on proprietary model APIs.</li>
+            <li>Defined evaluation frameworks and golden test sets for accuracy, retrieval precision, hallucination rate and response quality, with regression testing before promotion.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="role">
+        <div class="when">2018 – 2021</div>
+        <div class="what">
+          <h3>AML, Transaction Monitoring and Seller Payments Platforms</h3>
+          <div class="org">eBay, Austin · end-to-end design and backend engineering ownership for AML, payment operations and tax compliance</div>
+          <ul>
+            <li>Designed end-to-end AML architecture: live transaction monitoring, configurable rule-based alerting, case management, and regulatory reporting to FinCEN and European authorities. Replaced a vendor-run AML capability with an internally owned platform.</li>
+            <li>Re-engineered 1099 generation for ~2M sellers from three months to one week, with a secured environment for SSN-bearing data. Launched January 2019 and still in service.</li>
+            <li>Architected event-driven microservices for payments, billing and reporting, including provider integrations with JPMorgan Chase and American Express.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="role">
+        <div class="when">2013 – 2018</div>
+        <div class="what">
+          <h3>Cloud Infrastructure, Release Automation and Site Reliability</h3>
+          <div class="org">eBay, San Jose · platform engineering and 24x7 operations, 10-person team</div>
+          <ul>
+            <li>Automated releases for 100+ projects a week across ~100,000 servers with a 10-person team; drove Kubernetes, Docker and CI/CD adoption across eBay's container cloud and OpenStack. This foundation was later reused for model serving and evaluation pipelines.</li>
+            <li>Built production-like sandbox environments for third-party developers and vendors, with self-service provisioning and teardown.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="role">
+        <div class="when">2007 – 2013</div>
+        <div class="what">
+          <h3>Enterprise Application Delivery, DHL and Bank of America</h3>
+          <div class="org">Cognizant Technology Solutions · from individual delivery to leading an offshore team</div>
+          <p>Java and J2EE delivery for a DHL shipment-tracking application and Bank of America banking systems, including code review, release coordination and production support across offshore and US time zones.</p>
+        </div>
+      </div>
+      <div class="role">
+        <div class="when">2003 – 2007</div>
+        <div class="what">
+          <h3>Citibank Loan Management System</h3>
+          <div class="org">Birlasoft · Java delivery working directly with client stakeholders</div>
+          <p>Java components for loan capture, account setup, repayment schedules and interest/EMI business rules on Oracle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Research</span>
+    <h2 style="margin-top:8px">Making enterprise GenAI trustworthy enough for production</h2>
+    <p>Fair, secure, consistent and compliant. My published work and my production work circle the same problems, with layered controls at the training, runtime, prompt and platform levels. The next focus is agentic AI.</p>
+    <div class="four">
+      <div><b>Bias</b>Decisions that hold up across sellers, categories and regions.</div>
+      <div><b>Prompt security</b>Protocols for prompts that touch regulated data.</div>
+      <div><b>Conversational memory</b>Persistent, retrievable context across sessions.</div>
+      <div><b>Multimodal integration</b>Text, code, image and video in one judgment.</div>
+    </div>
+    <div class="papers" style="margin-top:24px">
+      <div class="paper">
+        <h3>BiasBarrier: A Fairness and Equity Filter for LLM Responses Under the Algorithmic Accountability Act</h3>
+        <p>A filter between the model and the user that detects and rebalances biased outputs before delivery and measures their impact afterward.</p>
+        <span class="cite">IJSRMT · Sep 2025 · 4(8), pp. 83–93 · doi:10.38124/ijsrmt.v4i8.754 · <a href="https://ijsrmt.com/index.php/ijsrmt/article/view/754" target="_blank" rel="noopener">Read</a></span>
+      </div>
+      <div class="paper">
+        <h3>Multi-Modal Fabricator: A Unified GenAI Architecture for Synthesizing Text, Code, and Images</h3>
+        <p>One generative architecture with a shared latent space that converts among text, code and images, instead of loosely coupled single-modality models.</p>
+        <span class="cite">JNRID · Sep 2025 · 3(8) · <a href="https://tijer.org/jnrid/papers/JNRID2508029.pdf" target="_blank" rel="noopener">Read</a></span>
+      </div>
+      <div class="paper">
+        <h3>PromptSecure: Secure Prompt Engineering Protocols for Regulated GenAI Environments</h3>
+        <p>Protocols for building and reviewing prompts that touch regulated data, so prompt design is governed the way code is.</p>
+        <span class="cite">IJISRT · Aug 2025 · 10(7) · <a href="https://www.ijisrt.com/promptsecure-secure-prompt-engineering-protocols-for-regulated-genai-environments" target="_blank" rel="noopener">Read</a></span>
+      </div>
+      <div class="paper">
+        <h3>LangChain-Augmented Memory Networks for Persistent Dialogue and Knowledge Retention in LLMs</h3>
+        <p>Memory that survives the session: persistent, retrievable context so an assistant stops forgetting what it learned yesterday.</p>
+        <span class="cite">IJSET · Aug 2025 · 13(4) · open access · <a href="https://www.researchgate.net/publication/394323647_Langchain-Augmented_Memory_Networks_for_Persistent_Dialogue_and_Knowledge_Retention_in_LLMS" target="_blank" rel="noopener">Read</a></span>
+      </div>
+      <div class="paper">
+        <h3>LLM-Debiaser: Mitigating Hidden Bias in Foundation Models</h3>
+        <p>Surfacing and correcting bias that is baked into a foundation model before it reaches a downstream application.</p>
+        <span class="cite">IJRAR · Aug 2025</span>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:14px;font-size:0.9rem">Full list on <a href="https://www.researchgate.net/profile/Tinakaran-Chinnachamy/publications" target="_blank" rel="noopener">ResearchGate</a> · ORCID 0009-0003-1168-7987</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Technical ground</h2>
+    <dl class="stack">
+      <div><dt>GenAI and LLM</dt><dd>RAG, Agentic RAG and GraphRAG · prompt and context engineering · model routing · structured outputs · fine-tuning with PEFT/LoRA · small language models · Phi-3, InternVL-1.5, Mistral, Gemma, Claude, GPT-4o, Llama</dd></div>
+      <div><dt>Agentic AI</dt><dd>LangChain, LangGraph, LlamaIndex, Semantic Kernel, CrewAI, AutoGen, OpenAI Agents SDK · MCP and A2A · ReAct, planner-executor, supervisor-worker and writer-critic patterns · closed-loop workflows with human checkpoints</dd></div>
+      <div><dt>Cloud AI and LLMOps</dt><dd>AWS Bedrock, SageMaker, Lambda, EKS · Azure OpenAI and AI Foundry · Vertex AI · model serving, inference and token-cost optimization, semantic and prompt caching · LangSmith, LangFuse, RAGAS, DeepEval, golden test sets, hallucination detection</dd></div>
+      <div><dt>Responsible AI</dt><dd>NeMo and Bedrock Guardrails · confidence-based routing · prompt-injection protection · PII masking · explainable AI · bias and fairness evaluation · OWASP LLM Top 10 · model risk management</dd></div>
+      <div><dt>Platform</dt><dd>Python, Java, FastAPI, Spring Boot · Kubernetes, Docker, Helm, Terraform · Kafka, Spark, Databricks · Postgres/pgvector, Pinecone, Chroma, FAISS · Prometheus, Grafana, distributed tracing</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Education and affiliations</h2>
+    <dl class="stack">
+      <div><dt>2024</dt><dd>Post Graduate Program in AI and Machine Learning for Leaders, McCombs School of Business, The University of Texas at Austin</dd></div>
+      <div><dt>2000</dt><dd>B.E. Electronics and Communication, National Engineering College, India</dd></div>
+      <div><dt>IEEE</dt><dd>Senior Member, Texas chapter · presenter at Texas technology forums · Responsible AI council participant · peer reviewer for TIJER, IJNRD, IJCRT, IJRAR and JETIR</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact">
+    <h2>Get in touch</h2>
+    <p>Open to senior applied-AI roles where the system design and the team that ships it are the same problem. Austin, hybrid in Texas, or remote. US permanent resident; no sponsorship needed.</p>
+    <div class="contact-row">
+      <span class="lbl">Email</span>
+      <code id="email">tinakaran@gmail.com</code>
+      <button class="btn" type="button" id="copy-email">Copy</button>
+    </div>
+    <div class="contact-row">
+      <span class="lbl">LinkedIn</span>
+      <a href="https://www.linkedin.com/in/tinakaran" target="_blank" rel="noopener">linkedin.com/in/tinakaran</a>
+    </div>
+    <div class="contact-row">
+      <span class="lbl">Research</span>
+      <a href="https://www.researchgate.net/profile/Tinakaran-Chinnachamy" target="_blank" rel="noopener">researchgate.net/profile/Tinakaran-Chinnachamy</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Tinakaran Chinnachamy · Austin, Texas</div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy-email');
+    var code = document.getElementById('email');
+    btn.addEventListener('click', function () {
+      var text = code.textContent;
+      function fallback() {
+        var r = document.createRange(); r.selectNodeContents(code);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Selected';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          btn.textContent = 'Copied';
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+        }).catch(fallback);
+      } else { fallback(); }
+    });
+  })();
+</script>
+</body>
+</html>
